@@ -10,8 +10,8 @@
 -- Portability : portable
 -- 
 -- 
--- This library supplies quasiquotation of UUIDs. You should use this in
--- case you want to hardcode UUIDs in your sourcecode with compile-time
+-- This library supplies quasiquotation of 'U.UUID's. You should use this in
+-- case you want to hardcode 'U.UUID's in your sourcecode with compile-time
 -- checking for syntax errors.
 
 module Data.UUID.Quasi (uuid) where
@@ -46,9 +46,11 @@ patUUID uuidStr = do
   toExp <- varE 'U.toWords
   return $ ViewP toExp patTup
 
-{- | The quasiquoter for expressions and patterns of 'UUID'. Make sure to enable '-XQuasiQuotes'.
+{- | The quasiquoter for expressions and patterns of 'U.UUID'. Make sure to enable '-XQuasiQuotes'.
 
 > > let a = [uuid|550e8400-e29b-41d4-a716-446655440000|]
+> > :type a
+> a :: UUID
 > > case a of { [uuid|550e8400-e29b-41d4-a716-446655440000|] -> True; _ -> False; }
 > True
 

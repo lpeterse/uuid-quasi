@@ -11,7 +11,10 @@ Build-Type:    Simple
 Cabal-Version: >= 1.6
 
 Description:
- This library is allows quasiquotation (expressions and patterns) of UUIDs.
+ This library is allows quasiquotation (expressions and patterns) of 'UUID's.
+
+Synopsis:
+  Supplemental package for 'uuid' allowing quasiquotation.
 
 Homepage:    http://github.com/lpeterse/uuid-quasi
 Bug-Reports: mailto:info@lars-petersen.net
