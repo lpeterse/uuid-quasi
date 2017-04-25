@@ -16,7 +16,7 @@
 
 module Data.UUID.Quasi (uuid) where
 
-import qualified Data.UUID as U
+import qualified Data.UUID.Types as U
 
 import Language.Haskell.TH.Lib
 import Language.Haskell.TH.Quote
